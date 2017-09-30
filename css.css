@@ -4,4 +4,11 @@ body {
 
 body img {
 	margin-top: 500px;
+	display: block;
+}
+
+img.big {
+	width: 400px;
+	height: auto;
+
 }
