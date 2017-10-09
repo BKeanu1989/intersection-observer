@@ -1,14 +1,46 @@
-body {
-	// background-color: black;
+body img {
+	margin-top: 1000px;
+	display: block;
 }
 
-body img {
-	margin-top: 500px;
-	display: block;
+
+img[data-loaded="true"] {
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+img[data-loaded="true"]:nth-child(odd) {
+	animation-name: slideInLeft;
+}
+
+img[data-loaded="true"]:nth-child(even) {
+	animation-name: slideInRight;
 }
 
 img.big {
 	width: 400px;
 	height: auto;
 
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
